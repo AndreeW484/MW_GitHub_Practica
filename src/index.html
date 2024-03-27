@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEMACO: Página Encuesta </title>
+    <link href="https://fonts.googleapis.com/css?family=Truculenta:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Encuesta de Satisfacción de Producto</h1>
+        </header>
+        <section>
+            <h2>Descripción:</h2>
+            <p class="description">Encuesta dinámica de <em>satisfacción</em> de producto adquirido en una de nuestras <strong>instalaciones CEMACO</strong> durante el mes de <strong>marzo de 2024.</strong></p>
+            <p><a href="https://www.cemaco.com/">Sitio web oficial CEMACO Guatemala</a></p>
+            <img src="https://www.productosmaby.com/wp-content/uploads/2019/10/logo-cemaco_010a00730.png" alt="Logo de CEMACO" width="300">
+        </section>
+        <section>
+            <h2>Preguntas:</h2>
+            <p>Por favor responde lo que se te solicita a continuación...</p>
+            <form action="http://localhost:8000/encuesta" method="post">
+                <table>
+                    <tr>
+                        <td class="form-group">
+                            <label for="nombre">Nombre: </label>
+                        </td>
+                        <td class="form-group">
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-group">
+                            <label for="telefono">Telefono: </label>
+                        </td>
+                        <td class="form-group">
+                            <input type="tel">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-group">
+                            <label for="fecha">Fecha: </label>
+                        </td>
+                        <td class="form-group">
+                            <input type="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-group">
+                            <label for="expectativa">1. ¿El producto cumplió sus expectativas?</label>
+                        </td>
+                        <td class="form-group">
+                            <select name="expectativa" id="expectativa">
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                                <option value="masmenos">Mas o menos</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-group">
+                            <label for="calidad">2. Del 1 al 10 ¿Cómo calificarías la calidad del producto?</label>
+                        </td>
+                        <td class="form-group">
+                            <input type="range" id="calidad" name="calidad" min="0" max="5" step="1" value="1">
+                            <output for="calidad" id="calidad-value">5</output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-group">
+                            <label for="recomendar">3. ¿Recomendaría este producto a otras personas?</label>
+                        </td>
+                        <td class="form-group">
+                            <select name="recomendar" id="recomendar">
+                                <option value="si">Si</option>
+                                <option value="talvez">Talvez</option>
+                                <option value="solopreguntan">Solo si me preguntan</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-group">
+                            <label for="aspectos">4. ¿Qué aspectos del producto le gustaron más?</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-group">
+                            <textarea name="aspectos" id="aspectos" cols="45" rows="5"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-group">
+                            <label for="aspectos">5. ¿Qué aspectos del producto considera que podrían mejorarse?</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-group">
+                            <textarea name="aspectos" id="aspectos" cols="45" rows="5"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-group">
+                            <input type="submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <script>
+
+                document.getElementById('calidad').addEventListener('input', function() {
+                  document.getElementById('calidad-value').textContent = this.value;
+                });
+              </script>
+
+        </section>
+        <footer>Encuesta elaborada por CEMACO Guatemala 2024.</footer>
+    </main>
+    
+</body>
+</html>
