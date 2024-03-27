@@ -1,0 +1,89 @@
+
+:root{
+    --color: ghostwhite;
+    --color-background-layer-1: rgb(205,181,26);
+    --color-background-layer-2: linear-gradient(0deg, rgba(205,181,26,1) 0%, rgba(76,139,215,1) 100%);
+    --color-background-layer-3: midnightblue;
+}
+
+body{
+    font-family: 'Truculenta', sans-serif;
+    font-size: 2.125rem;
+    font-weight: 600;
+    font-style: normal;
+    margin: 0;
+    color: var(--color);
+}
+
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--color-background-layer-1);
+    background: var(--color-background-layer-2);
+}
+
+h1{
+    font-weight:1400;
+    font-size: 4rem;
+    line-height: 1;
+    text-transform: uppercase;
+    
+}
+
+p{
+    font-size:2.125rem;
+}
+
+h1, p{
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+td{
+    display: flex;
+    align-items: center;
+    font-size: 2.125rem;
+    margin-bottom: 0.5rem;
+}
+
+input, button, select, textarea{
+    margin: 00;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button{
+    border: none;
+}
+
+.container{
+    width: 70%;
+    margin: 3.125rem auto 0 auto;
+}
+
+.header{
+    padding: 0 0.625rem;
+    margin-bottom: 1.875rem;
+}
+
+.description{
+    font-style: italic;
+    font-weight: 200;
+}
+
+form{
+    background: var(--color-background-layer-3);
+    padding: 2.5rem 0.625rem 2.5rem 0.625rem;
+    border-radius: 0.25rem;
+}
+
+.form-group{
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+}
